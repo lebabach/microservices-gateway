@@ -5,7 +5,7 @@
 
     <groupId>microservices.gateway</groupId>
     <artifactId>gateway</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.11-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Gateway</name>
 
