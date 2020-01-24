@@ -40,15 +40,22 @@ eureka:
 ribbon:
   eureka:
     enabled: true
+  ConnectTimeout: 20000
+  ReadTimeout: 20000
 # See http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html
 zuul: # those values must be configured depending on the application specific needs
   sensitive-headers: Cookie,Set-Cookie #see https://github.com/spring-cloud/spring-cloud-netflix/issues/3126
   host:
-    max-total-connections: 1000
-    max-per-route-connections: 100
+    max-total-connections: 30000
+    max-per-route-connections: 30000
+    connect-timeout-millis: 30000
+    socket-timeout-millis: 30000
   prefix: /services
   semaphore:
     max-semaphores: 500
+  routes:
+    gamblingproducer:
+      url: http://192.168.1.9:8081
 
 # See https://github.com/Netflix/Hystrix/wiki/Configuration
 hystrix:
@@ -57,7 +64,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 30000
 
 management:
   endpoints:
