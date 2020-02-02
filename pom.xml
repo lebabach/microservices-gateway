@@ -5,7 +5,7 @@
 
     <groupId>microservices.gateway</groupId>
     <artifactId>gateway</artifactId>
-    <version>0.0.11-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Gateway</name>
 
@@ -47,7 +47,7 @@
         <archunit-junit5.version>0.12.0</archunit-junit5.version>
         <mapstruct.version>1.3.1.Final</mapstruct.version>
         <!-- Plugin versions -->
-        <com.spotify.version>1.4.3</com.spotify.version>
+        <com.spotify.version>1.4.13</com.spotify.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
